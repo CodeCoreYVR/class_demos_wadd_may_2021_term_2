@@ -1,1 +1,30 @@
-console.log("Hello world!");
+const { multiply, test } = require("./math");
+const path = require("path");
+const axios = require("axios");
+console.log(axios);
+// console.log(path);
+// console.log(path.join(__dirname, "math.js", "test.js"));
+
+const primes = require("./primes");
+// console.log(multiply(2, 5));
+// console.log(primes);
+// test("this is sample text");
+// console.log(global);
+// global.console.log(global)
+
+// global.test = "test"
+// global.console = null;
+// console.log();
+
+// console.log(add(1, 2));
+
+// be default we have access to node js properties
+
+//current file
+// console.log(__filename);
+
+//current directory
+// console.log(__dirname)
+
+// access to current module
+// console.log(module);
