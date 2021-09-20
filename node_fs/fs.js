@@ -44,6 +44,12 @@ fs.rm("testFile.txt", (err) => {
   console.log(err);
 });
 
-fs.rmdir("node_modules", (err) => {
+//How to create directory
+fs.mkdir("testDirectory2/subfolder", { recursive: true }, (err) => {
+  console.error(err);
+});
+
+//This is how to delate directory
+fs.rmdir("node_modules", { recursive: true, force: true }, (err) => {
   console.log(err);
 });
