@@ -28,7 +28,7 @@ const path = require("path");
 // How to create a new file
 const textWeWantToPutInsideFile = "This is sample text 2";
 fs.writeFile("testFile.txt", textWeWantToPutInsideFile, (err) => {
-  console.log(err);
+  if (err) console.error(err);
 });
 
 // How to read content of the file
