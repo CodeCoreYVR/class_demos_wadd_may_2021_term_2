@@ -64,3 +64,25 @@ const testArray = ["text 1", "text 2", "text 3", "new"];
 // true means keep in the array
 // false means leave out
 // console.log(testArray.filter((value, index, self) => value.length > 4));
+
+// .every
+// This will return either true or false
+// True will be returned if all elements fulfill the condition in our callback function
+// False will be returned otherwise
+// console.log(testArray.every((value, index, self) => value.length > 5));
+
+//.some
+// This is almost the same function as every but it needs just on element to fulfill the callback function
+// in order return true
+// console.log(testArray.some((value, index, self) => value.length > 5));
+
+//.find
+// This will return element if condition of our callback function is fulfilled otherwise it will return undefined
+// Main difference between find and filter is that find returns first element which will fullfil the condition
+// And filter will return all elements which fullfil the condition
+// console.log(testArray.find((value, index, self) => value === "new "));
+
+//.fill
+// console.log(testArray);
+// const newArray = testArray.fill("New value from fill", 1, 10);
+// console.log(newArray);
