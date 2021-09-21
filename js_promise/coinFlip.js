@@ -57,6 +57,9 @@ const throwCoin = () =>
 
 const throwDie = (maximum) =>
   new Promise((resolve, reject) => {
+    // You can only reject or resolve promise once
+    // everything after reject or resolve will be ignored
+    // reject();
     // Gets random number between 1 and maximum
     const randomNumber = getRandomNumber(1, maximum);
     // Gets time needed for resolving this promise

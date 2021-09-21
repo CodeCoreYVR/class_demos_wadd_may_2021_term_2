@@ -22,24 +22,31 @@ const fs = require("fs");
 //     console.error("This promise was rejected with value", err);
 //   });
 
-const readFile = (filePath) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(filePath, { encoding: "utf-8" }, (err, data) => {
-      if (err) reject(err);
-      else resolve(data);
-    });
-  });
-};
+// const readFile = (filePath) => {
+//   return new Promise((resolve, reject) => {
+//     fs.readFile(filePath, { encoding: "utf-8" }, (err, data) => {
+//       if (err) reject(err);
+//       else resolve(data);
+//     });
+//   });
+// };
 
-readFile("./newFolder/newFile.txt")
-  .then((data) => {
-    console.log("This is data from promise", data);
-    throw "This is exception";
-    return readFile("./newFolder/newFile.txt");
-  })
-  .then((data2) => {
-    console.log("This is result of second file read", data2);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// readFile("./newFolder/newFile.txt")
+//   .then((data) => {
+//     console.log("This is data from promise", data);
+//     throw "This is exception";
+//     return readFile("./newFolder/newFile.txt");
+//   })
+//   .then((data2) => {
+//     console.log("This is result of second file read", data2);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+
+// const doHomework = new Promise((resolve, reject) => {});
+// This will return already resolved promise
+// console.log(Promise.resolve("This is the value"));
+
+//This will return already rejected promise
+// console.log(Promise.reject("I am rejected promise"));
