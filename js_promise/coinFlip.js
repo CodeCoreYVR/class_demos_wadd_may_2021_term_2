@@ -47,10 +47,28 @@ const throwCoin = () =>
 
 // console.log(getRandomNumber(1, 4));
 
-throwCoin()
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((err) => {
-    console.error(err);
+// throwCoin()
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
+
+const throwDie = (maximum) =>
+  new Promise((resolve, reject) => {
+    // Gets random number between 1 and maximum
+    const randomNumber = getRandomNumber(1, maximum);
+    // Gets time needed for resolving this promise
+    // this time is between 3 and 5
+    const timeToResolve = getRandomNumber(3, 5);
+    // Log the values to console
+    console.log(randomNumber, timeToResolve);
+    setTimeout(() => {
+      //Resolves with random number
+      resolve(randomNumber);
+      //Converts s => ms
+    }, timeToResolve * 1000);
   });
+
+throwDie(10).then((value) => console.log(value));
