@@ -1,6 +1,7 @@
 const qr = require("qrcode");
 const fs = require("fs/promises");
 const entryString = process.argv[2];
+// https://www.npmjs.com/package/qrcode
 // We can use method toString from qrCode library
 
 // and it will return a promise so we can use .then

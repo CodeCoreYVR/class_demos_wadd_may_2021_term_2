@@ -1,5 +1,6 @@
 // We start by importing the jimp module
 const Jimp = require("jimp");
+// https://www.npmjs.com/package/jimp
 
 // We will get our fileName from arguments
 const fileName = process.argv[2];

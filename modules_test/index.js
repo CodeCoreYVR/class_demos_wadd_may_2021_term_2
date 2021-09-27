@@ -1,3 +1,3 @@
-const test = require("@ondrejbelza/test");
+const haveANiceDay = require("@ondrejbelza/test");
 
-test();
+haveANiceDay();
