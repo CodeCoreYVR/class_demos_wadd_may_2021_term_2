@@ -1,0 +1,22 @@
+{
+  "name": "@ondrejbelza/test",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate-qr": "node enQRCode.js 'this is test text'",
+    "blur-image": "node blurImage.js qrCode2.png 5",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cowsay": "^1.5.0",
+    "jimp": "^0.16.1",
+    "lodash": "^4.17.21",
+    "qrcode": "^1.4.4"
+  }
+}
