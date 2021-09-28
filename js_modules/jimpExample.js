@@ -16,5 +16,5 @@ Jimp.read("vancouver.jpg")
         .quality(50)
     );
   })
-  .then((image) => image.writeAsync("vancouver-graysacle.jpg"))
+  .then((image) => image.writeAsync("vancouver-grayscale.jpg"))
   .catch((err) => console.error);
