@@ -84,7 +84,8 @@ const main = async () => {
     console.log(
       cowsay.say({
         text: rowText,
-        cow: cat,
+        // changes cow to squirrel
+        f: "squirrel",
       })
     );
   });
