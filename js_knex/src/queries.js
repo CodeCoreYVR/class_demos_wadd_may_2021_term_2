@@ -9,8 +9,16 @@ const main = async () => {
     // Await will block following code from execution until
     // we will get data from server
     const data = await knex
-      .select("title", "author", "viewCount")
-      .from("posts");
+      .select("title", "author", "viewCount", "text")
+      .from("posts")
+      // We can use this similarly to sql
+      .where("title", "ilike", "%ab%")
+      .where("viewCount", "<", 500)
+      // Limit to ten results
+      .limit(10)
+      // To ignore first ten results
+      // Use for pagination
+      .offset(10);
     // Then we can console log the output
     console.log(data);
   } catch (error) {
