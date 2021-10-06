@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "axios": "^0.22.0"
   }
 }
